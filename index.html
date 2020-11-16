@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Testing Activity</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    .blue {
+      padding: 1rem;
+      background-color: aliceblue;
+      border: 1px solid blue;
+    }
+  </style>
+  <script type="text/javascript" src="./index.js"></script>
+</head>
+<body>
+  <section>
+    <h1>Types of Testing</h1>
+    <p></p>
+    <p></p>
+
+    <h2>Unit</h2>
+    <p>Tests the smallest possible pieces of code. A failed test should make clear exactly what code is broken.</p>
+    <p></p>
+    <p></p>
+
+    <h2>Integration</h2>
+    <p>Tests that all the pieces of the application work together as expected. There are fewer of these types of tests. A failure in an integration test points to a problem in the interface between sections of code.</p>
+    <p></p>
+
+    <h2>Acceptance</h2>
+    <p></p>
+    <p></p>
+  </section>
+
+  <section class='blue'>
+    <h1>How Much Buying Power Do You Have?</h1>
+
+    <p>This calculator will tell you how much buying power your wages have.</p>
+
+    <form id="pay">
+
+      <label>What's your name?
+        <input type="text" id="name">
+      </label><br>
+
+      <label>How many hours per week do you work?
+        <input type="string" id="hours">
+      </label><br>
+
+      <label>How much are you paid per hour?
+        <input type="string" id="rate">
+      </label><br>
+
+      <input type="submit">
+    </form>
+
+    <div id="output"></div>
+  </section>
+</body>
+</html>
