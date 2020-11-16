@@ -6,6 +6,9 @@
     body {
       font-family: sans-serif;
     }
+    h1 {
+      border-bottom: 1px solid blue;
+    }
     .blue {
       padding: 1rem;
       background-color: aliceblue;
@@ -17,21 +20,53 @@
 <body>
   <section>
     <h1>Types of Testing</h1>
-    <p></p>
-    <p></p>
+
+    <p>The lines between different types of testing can be a little blurry. Different companies and teams will have slightly different definitions for each type. This is a general guide.</p>
 
     <h2>Unit</h2>
-    <p>Tests the smallest possible pieces of code. A failed test should make clear exactly what code is broken.</p>
-    <p></p>
-    <p></p>
+
+    <p>Test that the individual parts of a program work as expected. The vast majority of tests in an application's suite will be of type "unit."</p>
+
+    <ul>
+      <li>Tests the smallest possible pieces of programmatic functionality, concentrating on inputs and outputs.</li>
+      <li>One failed test should correspond with one defect in the code.</li>
+      <li>These run in a development environment.</li>
+      <li>They're run multiple times while writing new code, and before new code is merged to main branch.</li>
+      <li>Primary stakeholders are programmers.</li>
+    </ul>
 
     <h2>Integration</h2>
-    <p>Tests that all the pieces of the application work together as expected. There are fewer of these types of tests. A failure in an integration test points to a problem in the interface between sections of code.</p>
-    <p></p>
+
+    <p>Test that the pieces of the application work together as expected. This includes external dependencies like APIs and databases, when possible. There are fewer of these types of tests.</p>
+
+    <ul>
+      <li>Test more than one piece of functionality in concert.</li>
+      <li>A failure in an integration test points to a problem in the interface between sections of code. Sometimes, there are false failures due to things like network connectivity.</li>
+      <li>These run in a development environment.</li>
+      <li>They're run a few times while writing new code, and before new code is merged to main branch.</li>
+      <li>Primary stakeholders are programmers.</li>
+    </ul>
 
     <h2>Acceptance</h2>
-    <p></p>
-    <p></p>
+
+    <p>Test that the application provides the expected user experience, as defined by the product owner. There are very few of these types of tests.</p>
+
+    <ul>
+      <li>Test an entire user flow (e.g. signing up for a new account).</li>
+      <li>A failure does not clearly indicate where the code defect lies.</li>
+      <li>These run in a production-like environment.</li>
+      <li>They are run before new code is merged to main branch, and after every deploy.</li>
+      <li>Primary stakeholder is product owner.</li>
+    </ul>
+
+    <h2>Performance</h2>
+
+    <p>Test a system's performance characteristics, like page load time or response latency.</p>
+
+    <h2>Load</h2>
+
+    <p>Test how performance holds up under heavy traffic. This may be considered a subset of performance or acceptance testing.</p>
+
   </section>
 
   <section class='blue'>
@@ -58,5 +93,20 @@
 
     <div id="output"></div>
   </section>
+
+  <section>
+    <h2>Questions</h2>
+
+    <ul>
+      <li>Which pieces of functionality are most important to test? Which can go untested?</li>
+      <li>What scenarios should we write unit tests for?</li>
+      <li>What scenarios should we write integration tests for?</li>
+      <li>What scenarios should we write acceptance tests for?</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>See the code for this activity at <a href="https://github.com/cherimarie/testing-example/">https://github.com/cherimarie/testing-example/</a></p>
+  </footer>
 </body>
 </html>
